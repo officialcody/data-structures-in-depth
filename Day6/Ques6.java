@@ -22,6 +22,28 @@ public class Ques6 {
         return count;
     }
 
+    /**
+     * Optimized Solution using HashMap
+     * Time Complexity = O(n)
+     * @param arr
+     * @param n
+     * @param target
+     * @return count
+     */
+    public static int count(int[] arr, int n, int x) {
+        int ans=0;
+        Map<Integer,Integer> mp=new HashMap<Integer, Integer>();
+        for(int i=0;i<n;i++) {
+            mp.put(arr[i],mp.getOrDefault(arr[i],0)+1);
+        }
+        for(Map.Entry<Integer,Integer>entry:mp.entrySet()) {
+            if(entry.getKey()==x) {
+                ans=entry.getValue();
+            }
+        }
+        return ans;
+    }
+
     /***
      * Optimized solution using binary search
      * Time Complexity = O(Log(n))
