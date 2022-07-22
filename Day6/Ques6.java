@@ -23,14 +23,14 @@ public class Ques6 {
     }
 
     /**
-     * Optimized Solution using HashMap
+     * Solution using HashMap
      * Time Complexity = O(n)
      * @param arr
      * @param n
      * @param target
      * @return count
      */
-    public static int count(int[] arr, int n, int x) {
+    public static int countHashMap(int[] arr, int n, int x) {
         int ans=0;
         Map<Integer,Integer> mp=new HashMap<Integer, Integer>();
         for(int i=0;i<n;i++) {
@@ -45,15 +45,16 @@ public class Ques6 {
     }
 
     /***
-     * Optimized solution using binary search
-     * Time Complexity = O(Log(n))
-     * Find the position/index of first occurence of target and then loop till target is equal to array elements after that position
+     * Solution using binary search
+     * Time Complexity = O(n)
+     * Find the position/index of first occurence of target and then loop till target
+     * is equal to array elements after that position
      * @param arr
      * @param n
      * @param target
      * @return count
      */
-    public static int countOptimized(int [] arr, int n, int target) {
+    public static int countBinarySearch(int [] arr, int n, int target) {
         int low=0;
         int high=n-1,count=0;
         int pos=0;
@@ -70,8 +71,11 @@ public class Ques6 {
                 high=mid-1;
             }
         }
-        while(arr[pos++]==target) {
-            count++;
+        while(pos < n) {
+            if(arr[pos] == target){
+                count++;
+            }
+            pos++;
         }
         return count;
     }
@@ -89,9 +93,13 @@ public class Ques6 {
         System.out.println("====Brute force approach====");
         System.out.println("Number of occurences: " + answerBruteForce);
 
-        int answerOptimized = countOptimized(arr, n, target);
-        System.out.println("====Optimized approach====");
-        System.out.println("Number of occurences: " + answerOptimized);
+        int answerBinarySearch = countBinarySearch(arr, n, target);
+        System.out.println("====Using Binary Search====");
+        System.out.println("Number of occurences: " + answerBinarySearch);
+
+        int answerHashMap = countHashMap(arr, n, target);
+        System.out.println("====Using HashMap====");
+        System.out.println("Number of occurences: " + answerHashMap);
 
         scan.close();
     }
