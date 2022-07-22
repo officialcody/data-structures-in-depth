@@ -4,8 +4,7 @@ package Day6;
 import java.util.*;
 
 public class Ques6 {
-    /**
-     * Brute Force approach
+    /** Brute Force approach
      * Time Complexity = O(n)
      * @param arr
      * @param n
@@ -22,8 +21,7 @@ public class Ques6 {
         return count;
     }
 
-    /**
-     * Solution using HashMap
+    /** Solution using HashMap
      * Time Complexity = O(n)
      * @param arr
      * @param n
@@ -44,8 +42,7 @@ public class Ques6 {
         return ans;
     }
 
-    /***
-     * Solution using binary search
+    /*** Solution using binary search
      * Time Complexity = O(n)
      * Find the position/index of first occurence of target and then loop till target
      * is equal to array elements after that position
