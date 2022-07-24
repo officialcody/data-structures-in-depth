@@ -3,6 +3,9 @@ package Day8;
 import java.util.Scanner;
 
 public class Ques6 {
+    // public int lastIndex( String s) {
+    //     return s.lastIndexOf("1");
+    // }
     public static int lastIndex(String s) {
         int lastIndex = -1;
         for(int i=0;i<s.length();i++){
