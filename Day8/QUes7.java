@@ -1,8 +1,27 @@
 package Day8;
 
+// Number of Numbers in an array
 import java.util.*;
 
 public class QUes7 {
+    /*** USING STRING BUILDER
+     * 
+     * @param a
+     * @param n
+     * @param k
+     * @return
+     */
+    public static int num(int a[], int n, int k) {
+        StringBuilder sb = new StringBuilder();
+        for(int x : a){
+            sb.append(x);
+        }
+        String strk = "" + k;
+        String s = sb.toString();
+        s = s.replaceAll(strk, "");
+        return sb.length() - s.length();
+    }
+
     public static int numberOfNumbers(int a[], int n, int k) {
         int count = 0;
         for(int i=0;i<n;i++){
