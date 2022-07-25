@@ -4,6 +4,25 @@ package Day9;
 import java.util.*;
 
 public class Ques1 {
+
+    public static void leftRotateOptimized(int arr[], int k, int n)  {
+        k = k%n;
+        
+        reverse(arr,0,k-1);
+        reverse(arr,k,n-1);
+        reverse(arr,0,n-1);
+    } 
+
+    public static void reverse(int arr[], int low , int high){
+        while(low<high){
+            int temp = arr[low];
+            arr[low] = arr[high];
+            arr[high] = temp;
+            low++;
+            high--;
+        }
+    }
+
     public static void leftRotate(long arr[], int k,int n) {
         ArrayList<Long> al = new ArrayList<Long>();
         for(int i=k%n;i<n;i++){
