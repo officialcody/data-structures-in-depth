@@ -3,11 +3,20 @@ package Recursion;
 import java.util.*;
 
 public class PowerOfNumber {
+
+    /*
+     * Time Complexity => O(N)
+     * Space Complexity => O(N)
+     */
     public static long power(int base, int power){
         if(power == 0) return 1;
         return base * power(base, power - 1);
     }
 
+    /*
+     * Time Complexity => O(Log(N))
+     * Space Complexity => O(Log(N))
+     */
     public static long powerOptimized(int base, int power){
         if(power == 0) return 1;
         if(power%2 == 1) return power(base, power/2) * power(base, power/2) * base;
