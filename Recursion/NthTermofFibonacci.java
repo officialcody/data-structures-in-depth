@@ -12,7 +12,7 @@ public class NthTermofFibonacci {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         int nthFibonacci = nthFibonacci(n);
-        System.out.println("Factorial of " + n + " is: " + nthFibonacci);
+        System.out.println(n + "th fibonacci number is: " + nthFibonacci);
         scan.close();
     }
 }

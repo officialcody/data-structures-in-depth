@@ -12,7 +12,7 @@ public class SumOfNaturalNumbers {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         int sum = sumOfNaturalNumbers(n);
-        System.out.println("Factorial of " + n + " is: " + sum);
+        System.out.println("Sum of first " + n + " natural numbers is: " + sum);
         scan.close();
     }
 }
