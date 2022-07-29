@@ -10,14 +10,9 @@ public class Ques10 {
         for(int i=0;i<(int)n;i++){
             if(i % 2 == 0){
                 minTotalTimeA += a[i];
-            } else {
-                minTotalTimeA += b[i];
-            }
-        }
-        for(int i=0;i<(int)n;i++){
-            if(i % 2 == 0){
                 minTotalTimeB += b[i];
             } else {
+                minTotalTimeA += b[i];
                 minTotalTimeB += a[i];
             }
         }
