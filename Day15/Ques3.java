@@ -35,7 +35,6 @@ public class Ques3 {
         for(int i=0;i<n;i++){
             arr[i] = scan.nextLong();
         }
-
         long diffLowHighOccurence = findDiff(arr, n);
         System.out.println("Difference between highest occurence and lowest occurence is: " + diffLowHighOccurence);
         scan.close();
