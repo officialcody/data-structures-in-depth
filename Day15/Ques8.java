@@ -4,13 +4,24 @@ package Day15;
 import java.util.*;
 
 public class Ques8 {
+    // Works on smaller outputs
+    // 
+    // public String MaxNumber(long arr[], long n) {
+    //     Arrays.sort(arr);
+    //     long answer = 0;
+    //     for(int i=(int)n-1;i>=0;i--){
+    //         answer = answer + arr[i] * (long) Math.pow(10, i);
+    //     }
+    //     return Long.toString(answer);
+    // }
+    
     public static String MaxNumber(long arr[], long n) {
         StringBuilder str=new StringBuilder();
-       Arrays.sort(arr);
-       for(int i=0; i<arr.length; i++){
+        Arrays.sort(arr);
+        for(int i=0; i<arr.length; i++){
            str.append(arr[i]);
-       }
-       return str.reverse().toString();
+        }
+        return str.reverse().toString();
     }
 
     public static void main(String[] args) {
