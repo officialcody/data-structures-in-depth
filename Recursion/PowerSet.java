@@ -12,8 +12,7 @@ public class PowerSet {
         } else {
             allSubsets = getSubset(set, index - 1);
             int item = set[index];
-            ArrayList<ArrayList<Integer> > moreSubsets
-                = new ArrayList<ArrayList<Integer>>();
+            ArrayList<ArrayList<Integer>> moreSubsets = new ArrayList<ArrayList<Integer>>();
  
             for (ArrayList<Integer> subset : allSubsets) {
                 ArrayList<Integer> newSubset = new ArrayList<Integer>();
