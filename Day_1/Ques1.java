@@ -1,5 +1,6 @@
 package Day_1;
 
+// Factorial
 import java.util.*;
 
 class Ques1 {
@@ -18,6 +19,7 @@ class Ques1 {
         Scanner scan = new Scanner(System.in);
         int number = scan.nextInt();
         int factorial = factorial(number);
+        System.out.println("Factorial of " + number + " is: " + factorial);
         scan.close();
     }
 }
