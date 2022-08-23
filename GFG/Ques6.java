@@ -5,6 +5,31 @@ import java.util.*;
 
 public class Ques6 {
     /***
+     * USING Sorting 
+     * @param a1
+     * @param a2
+     * @param n
+     * @param m
+     * @return
+     */
+    public static String isSubset3( long a1[], long a2[], long n, long m) {
+        Arrays.sort(a1);
+        Arrays.sort(a2);
+        int i = 0;
+        int j = 0;
+        while(i<n && j <m){
+            if(a1[i] == a2[j]){
+                j++;
+            }
+            i++;
+        }
+        if(j >= m){
+            return "Yes";
+        }
+        return "No";
+    }
+    
+    /***
      * USING ARRAYLIST
      * @param a1
      * @param a2
@@ -27,7 +52,7 @@ public class Ques6 {
        }
        return "Yes";
     }
-    
+
     /***
      *  USING HASHMAP
      * @param a1
