@@ -19,7 +19,7 @@ public class BinaryToDecimal {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         int binaryToDecimal = binaryToDecimal(n);
-        System.out.println("Binomial Coefficient is: " + binaryToDecimal);
+        System.out.println("Binary to Decimal: " + binaryToDecimal);
         scan.close();
     }
 }
