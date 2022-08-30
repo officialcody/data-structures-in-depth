@@ -1,6 +1,6 @@
 package Patterns;
 
-public class P1 {
+public class HollowRectangle {
     // Hollow Rectangle
     public static void printHollowRectanglePattern(int n) {
         for (int i = 0; i < n; i++) {
