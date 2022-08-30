@@ -1,5 +1,7 @@
 package Patterns;
 
+import java.util.Scanner;
+
 public class HollowRectangle {
     // Hollow Rectangle
     public static void printHollowRectanglePattern(int n) {
@@ -13,5 +15,12 @@ public class HollowRectangle {
             }
             System.out.println();
         }
+    }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        printHollowRectanglePattern(n);
+        scan.close();
     }
 }
