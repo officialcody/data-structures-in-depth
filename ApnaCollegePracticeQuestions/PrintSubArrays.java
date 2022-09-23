@@ -1,7 +1,6 @@
 package ApnaCollegePracticeQuestions;
 
 // Print All Subarrays of an array
-import java.util.Scanner;
 
 public class PrintSubArrays {
 
