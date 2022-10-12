@@ -1,16 +1,17 @@
 package ApnaCollegePracticeQuestions.Recursion;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class FirstOccurenceInArray {
-    public static int firstOccurenceInArray(int n, int [] arr, int target, int pos) {
+public class LastOccurenceInArray {
+    public static int lastOccurenceInArray(int n, int [] arr, int target, int pos) {
         if(pos == n) {
             return -1;
         }
-        if(arr[pos] == target) {
+        int isFound = lastOccurenceInArray(n, arr, target, pos+1);
+        if(arr[pos] == target && isFound == -1) {
             return pos;
         }
-        return firstOccurenceInArray(n, arr, target, pos+1);
+        return isFound;
     }
 
     public static void main(String[] args) {
@@ -21,11 +22,11 @@ public class FirstOccurenceInArray {
             arr[i] = scan.nextInt();
         }
         int target = scan.nextInt();
-        int firstOccurence = firstOccurenceInArray(n, arr, target, 0);
-        if(firstOccurence == -1) {
+        int lastOccurence = lastOccurenceInArray(n, arr, target, 0);
+        if(lastOccurence == -1) {
             System.out.println("Not found");
         } else {
-            System.out.println(target + " found at index: " + firstOccurence);
+            System.out.println(target + " found at index: " + lastOccurence);
         }
         scan.close();
     }
